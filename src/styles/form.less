@@ -1,0 +1,55 @@
+.ivu-form-item-error-tip,
+.ivu-form-item-required .ivu-form-item-label:before {
+    color: @primary-color;
+}
+
+.ivu-form-item-error {
+    .ivu-input,
+    .ivu-input:hover,
+    .ivu-input:focus {
+        border-color: @primary-color;
+    }
+    .ivu-input:focus {
+        box-shadow: none;
+    }
+
+    .ivu-input-group-prepend,
+    .ivu-input-group-prepend {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: @primary-color;
+    }
+}
+
+.form-block {
+    &:nth-last-child(n + 2) {
+        margin-bottom: 20px;
+        border-bottom: 1px solid @border-color-split;
+    }
+    .block-title {
+        margin-bottom: 20px;
+    }
+    .ivu-form-item-label {
+        color: #fff;
+        padding-right: 25px;
+    }
+    .ivu-form-item-content {
+        .ivu-tag-border {
+            @h: 32px;
+            height: @h;
+            line-height: @h;
+        }
+        .ivu-tree {
+            margin-top: -7px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ivu-form .ivu-form-item-label {
+        width: auto !important;
+    }
+    .ivu-form-item-content {
+        margin-left: 0 !important;
+        clear: left;
+    }
+}

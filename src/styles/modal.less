@@ -1,0 +1,27 @@
+.scroll-modal {
+    .ivu-modal {
+        top: 30px;
+        @media (max-width: 768px) {
+            margin: 0 20px;
+        }
+    }
+    .ivu-modal-body {
+        max-height: calc(~"100vh - 30px - 51px - 57px - 30px");
+        overflow: auto;
+        background-color: #042368;
+    }
+}
+
+.ivu-modal-content {
+    background-color: @background-color-base;
+}
+
+.ivu-modal-header {
+    background-color:#1890FF;
+    height:33px
+}
+
+.ivu-modal-footer {
+    text-align: center;
+    background-color: #021132;
+}

@@ -1,0 +1,33 @@
+// 迷之样式, 按钮focus时会有边框... 但是iview官方demo和 iview-admin demo里都没有这个样式
+.ivu-btn:focus,
+.ivu-btn-primary:focus,
+.ivu-btn-ghost:focus,
+.ivu-btn-dashed:focus,
+.ivu-btn-text:focus,
+.ivu-btn-info:focus,
+.ivu-btn-success:focus,
+.ivu-btn-warning:focus,
+.ivu-btn-error:focus {
+    box-shadow: unset;
+}
+
+.ivu-btn-default {
+    color: @primary-color
+}
+
+.ivu-btn>.ivu-icon {
+    line-height: 18px;
+}
+
+.ivu-btn-text {
+    color: @primary-color;
+
+    &:hover {
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
+
+.ivu-btn-ghost.ivu-btn-primary:hover {
+    background: unset;
+}

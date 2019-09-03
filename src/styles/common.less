@@ -1,0 +1,141 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: @body-background;
+    overflow: hidden;
+}
+
+.margin-top-8 {
+    margin-top: 8px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-left-10 {
+    margin-left: 10px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-100 {
+    margin-bottom: 100px;
+}
+
+.margin-right-10 {
+    margin-right: 10px;
+}
+
+.padding-left-6 {
+    padding-left: 6px;
+}
+
+.padding-left-8 {
+    padding-left: 5px;
+}
+
+.padding-left-10 {
+    padding-left: 10px;
+}
+
+.padding-left-20 {
+    padding-left: 20px;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.height-120px {
+    height: 100px;
+}
+
+.height-200px {
+    height: 200px;
+}
+
+.height-492px {
+    height: 492px;
+}
+
+.height-460px {
+    height: 460px;
+}
+
+.line-gray {
+    height: 0;
+    border-bottom: 2px solid #dcdcdc;
+}
+
+.notwrap {
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.padding-left-5 {
+    padding-left: 10px;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.content-flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* 旋转 */
+.rotate-right {
+    transform: rotate(90deg);
+}
+
+.rotate-left {
+    transform: rotate(-90deg);
+}
+
+.rotate-reverse {
+    transform: rotate(180deg);
+}
+
+/* 平滑过渡 */
+.smooth {
+    transition: all .3s
+}
+
+/* 文本颜色 */
+.text-variant(@color, @name) {
+    .text-@{name} {
+        color: @color;
+
+        .ivu-input,
+        .ivu-input-number-input {
+            color: @color;
+        }
+    }
+
+    a.text-@{name}:hover {
+        color: lighten(@color, 10%);
+    }
+}
+
+.text-variant(@success-color, success);
+.text-variant(@primary-color, primary);
+.text-variant(@warning-color, warning);
+.text-variant(@error-color, error);
+.text-variant(@info-color, info);
+.text-variant(@text-color, default);

@@ -1,0 +1,128 @@
+@c : @head-bg; //#83afde14
+
+.ivu-card {
+    background: @component-background
+}
+
+.ivu-card-head {
+    background-color: @c;
+}
+
+.ivu-card-head-inner,
+.ivu-card-head p {
+    font-size: 16px;
+}
+
+.ivu-card-extra {
+    .ivu-icon {
+        font-size: 20px;
+    }
+}
+
+.ivu-card-body {
+    >footer {
+        margin: 0 -16px -16px;
+        padding: 10px 16px 10px;
+        border-top: 1px solid @border-color-split;
+        background-color: @c;
+        text-align: right;
+
+        .ivu-btn {
+            margin-right: 5px;
+        }
+
+        // .ivu-btn-ghost {
+        //     background-color: #fff;
+        // }
+    }
+}
+
+
+.light-card {
+    &.ivu-card {
+        background: #031845;
+
+        &:hover {
+            border-color: @border-color-split;
+        }
+    }
+
+    &.ivu-card-bordered {
+        box-shadow: 0 0 4px 2px @border-color-split inset
+    }
+
+
+    &.has-title {
+        &.style2 {
+            .light-card-title {
+                color: #fff;
+
+                &:before {
+                    background: #0f69ef;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .ivu-card-body {
+            position: relative;
+            padding-top: 0;
+        }
+
+        .light-card-title {
+            position: relative;
+            margin: 0 auto 16px;
+            max-width: 320px;
+            min-width: 190px;
+            width: 30%;
+            // box-shadow: 0 0 4px 2px @border-color-split inset;
+            color: @primary-color;
+            // background: #031741;
+            font-size: 16px;
+            text-align: center;
+            padding: 3px 0;
+            z-index: 1;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 1px;
+                bottom: -1px;
+                right: 0;
+                left: 0;
+                display: block;
+                z-index: -1;
+                background: #031741;
+                transform: perspective(.5em) rotateX(-4deg);
+                box-shadow: 0 0 4px 2px @border-color-split inset;
+            }
+
+            // &:before,
+            // &:after {
+            //     content: '';
+            //     position: absolute;
+            //     top: 10px;
+            //     display: block;
+            //     border-width: 20px;
+            //     border-style: solid;
+            //     transform: rotate(45deg);
+            // }
+
+            // &:before {
+            //     left: -20px;
+            //     border-color: #031741 transparent transparent transparent;
+            //     box-shadow: 0 -1px 4px 2px @border-color-split;
+            // }
+
+            // &:after {
+            //     right: -20px;
+            //     transform: rotate(45deg);
+            //     border-color: transparent transparent transparent #031741;
+            //     box-shadow: -1px 0 4px 2px @border-color-split;
+            // }
+
+        }
+    }
+
+
+}

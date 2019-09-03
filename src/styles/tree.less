@@ -1,0 +1,85 @@
+@import "~iview/src/styles/custom.less";
+
+.tree-node {
+    font-size: 14px;
+    display: inline-block; // width: calc(~"100% - 15px");
+    vertical-align: top;
+    padding: 0 4px;
+
+    &:hover {
+        .tree-options {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    &.active {
+        .tree-node-title {
+            color: @primary-color;
+        }
+
+        .tree-options {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+.ivu-tree-arrow i {
+    color: #fff;
+    font-size: 18px
+}
+
+.tree-ico {
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
+}
+
+.tree-node-title {
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer; // height: 18px;
+    white-space: nowrap; // overflow: hidden;
+    // text-overflow: ellipsis;
+}
+
+.tree-options {
+    display: inline-block;
+    margin-right: 5px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all .3s;
+
+    >.opt {
+        @w: 20px;
+        display: inline-block;
+        width: @w;
+        height: @w;
+        margin-right: 5px;
+        color: @btn-ghost-color ;
+        border: 1px solid @btn-ghost-border;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+        transition: all .5s;
+        font-size: 12px;
+
+        &:hover {
+            border-color: @primary-color;
+            color: @primary-color;
+        }
+    }
+}
+
+.ivu-tree-title {
+    color: #fff;
+    font-size: 14px;
+
+    &:hover {
+        background-color: lighten(@background-color-base, 20%);
+    }
+    &-selected, &-selected:hover{
+        background-color: lighten(@background-color-base, 10%);
+    }
+}
